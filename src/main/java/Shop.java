@@ -25,9 +25,9 @@ public class Shop {
     }
 
     public double getTotalProfit() {
-        double total = 0;
-        for (int i = 0; i < this.stock.size(); i++) {
-            total += this.stock.get(i).calculateMarkup();
+        int total=0;
+        for (ISell item : stock) {
+            total += item.calculateMarkup();
         }
         return total;
     }
